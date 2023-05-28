@@ -3,6 +3,7 @@ package com.rosariob.springboot.cruddemo.dao;
 import com.rosariob.springboot.cruddemo.entity.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -17,7 +18,6 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public User findByUserName(String theUserName) {
 
-		// retrieve/read from database using username
 		TypedQuery<User> theQuery = entityManager.createQuery("from User where userName=:uName", User.class);
 		theQuery.setParameter("uName", theUserName);
 
@@ -31,4 +31,9 @@ public class UserDaoImpl implements UserDao {
 		return theUser;
 	}
 
+	@Transactional
+	@Override
+	public User save(User user) {
+		return entityManager.merge(user);
+	}
 }
