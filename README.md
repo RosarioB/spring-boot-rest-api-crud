@@ -11,7 +11,7 @@ Each branch implements different features:
 - ***spring_security_custom_tables_with_JPA_hibernate***: provides CRUD APIs with Spring security authentication via JDBC using JPA and Hibernate (which means that User and Role are now entities)
 - ***spring_security_user_registration*** I have added to the previous branch a REST API to allow the registration of a new user following this example:  https://github.com/Baeldung/spring-security-registration. I need to add more features to handle the users though.
 
-In each branch the folder **sql-scripts** contains the SQL scripts to be run in MySQL.
+In each branch the folder ***sql-scripts*** contains the SQL scripts to be run in MySQL.
 
 NOTE: to make use of Spring dev tools on Intellij in Settings -> Build, Execution, Deployment check Build Project Automatically and in Advanced Settings check Allow auto-make to start even if developed application is currently running.
 
