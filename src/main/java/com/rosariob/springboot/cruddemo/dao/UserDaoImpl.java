@@ -3,7 +3,6 @@ package com.rosariob.springboot.cruddemo.dao;
 import com.rosariob.springboot.cruddemo.entity.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.TypedQuery;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -31,7 +30,6 @@ public class UserDaoImpl implements UserDao {
 		return theUser;
 	}
 
-	@Transactional
 	@Override
 	public User save(User user) {
 		return entityManager.merge(user);

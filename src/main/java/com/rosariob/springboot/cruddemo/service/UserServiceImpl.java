@@ -6,6 +6,7 @@ import com.rosariob.springboot.cruddemo.dto.UserDto;
 import com.rosariob.springboot.cruddemo.entity.Role;
 import com.rosariob.springboot.cruddemo.entity.User;
 import com.rosariob.springboot.cruddemo.error.UserAlreadyExistException;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -54,6 +55,7 @@ public class UserServiceImpl implements UserService {
 		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList());
 	}
 
+	@Transactional
 	public User registerNewUserAccount(final UserDto accountDto) {
 		if (userExists(accountDto)) {
 			throw new UserAlreadyExistException("There is already an account with user name: " + accountDto.getUserName());
