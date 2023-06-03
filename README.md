@@ -1,4 +1,4 @@
-# spring-boot-rest-api-crud
+# spring-boot-rest-api-crud-mysql
 Spring Boot Rest APIs with CRUD for MySQL. 
 
 Each branch implements different features:
