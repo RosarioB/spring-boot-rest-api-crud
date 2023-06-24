@@ -14,5 +14,3 @@ Each branch implements different features:
 In each branch the folder ***sql-scripts*** contains the SQL scripts to be run in MySQL.
 
 NOTE: to make use of Spring dev tools on Intellij in Settings -> Build, Execution, Deployment check Build Project Automatically and in Advanced Settings check Allow auto-make to start even if developed application is currently running.
-
-All APIs have been implemented starting from the code of this course: https://github.com/darbyluv2code/spring-boot-3-spring-6-hibernate-for-beginners. I may have added/changed something to address my goals.
