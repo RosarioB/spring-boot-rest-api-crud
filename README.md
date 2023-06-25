@@ -9,7 +9,7 @@ Each branch implements different features:
 - ***spring_security_jdbc_auth_default_tables***: provides CRUD APIs with Spring Security authentication via JDBC with default table (default Spring tbale names and columns-  cannot be changed) both with plaintext and bcrypt passwords (the code is the same the only thing that changes is the prefix {noop} or {bcrypt} before the passwords stored inside the database)
 - ***spring_security_jdbc_auth_custom_tables***: provides CRUD APIs with Spring Security authentication via JDBC with custom tables
 - ***spring_security_custom_tables_with_JPA_hibernate***: provides CRUD APIs with Spring security authentication via JDBC using JPA and Hibernate (which means that User and Role are now entities)
-- ***spring_security_user_registration*** I have added to the previous branch a REST API to allow the registration of a new user following this example:  https://github.com/Baeldung/spring-security-registration. I need to add more features to handle the users though.
+- ***spring_security_user_registration*** I have added to the previous branch a REST API to allow the registration of a new user following [this example](https://github.com/Baeldung/spring-security-registration). I need to add more features to handle the users though.
 
 In each branch the folder ***sql-scripts*** contains the SQL scripts to be run in MySQL.
 
